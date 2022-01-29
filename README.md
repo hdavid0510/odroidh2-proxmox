@@ -6,10 +6,7 @@ Automated PROXMOX initial setup.
 
 Simply run as **root**:
 ``` bash
-cd ~/
-git clone https://github.com/hdavid0510/odroidh2-proxmox
-cd odroidh2-proxmox
-./setup.sh
+(cd ~/ && apt update && apt install git -y && git clone https://github.com/hdavid0510/odroidh2-proxmox && cd odroidh2-proxmox && chmod +x setup.sh && ./setup.sh )
 ```
 
 ## How it works

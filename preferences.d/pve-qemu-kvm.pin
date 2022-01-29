@@ -1,3 +1,0 @@
-Package: pve-qemu-kvm
-Pin: version 6.0.0*
-Pin-Priority: 999

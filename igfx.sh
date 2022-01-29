@@ -36,6 +36,24 @@ echo -e "\n\033[93m\033[1mDisabling VGA output from igpu\033[0m"
 echo "options vfio-pci ids=8086:3184 disable_vga=1" | tee -a /etc/modprobe.d/vfio.conf
 
 
+echo -e "\n\033[93m\033[1mInstalling PROXMOX kernel 5.11\033[0m"
+
+apt install pve-kernel-5.11 -y
+# This will install pve-kernel-5.11.22-7
+
+
+echo -e "\n\033[93m\033[1mConfiguring kernel 5.11 as default boot entry\033[0m"
+
+cp /etc/default/grub /etc/default/grub.bak
+ID=$(grep 'Advanced options for Proxmox VE GNU/Linux' /boot/grub/grub.cfg | grep -E -o "advanced-([0-9abcdef-]){36}")
+sed -i "s/GRUB_DEFAULT=0/# GRUB_DEFAULT=0\nGRUB_DEFAULT=\"gnulinux-$ID>gnulinux-5.11.22-7-pve-$ID\"/g" /etc/default/grub
+
+
+echo -e "\n\033[93m\033[1mUpdating GRUB config\033[0m"
+
+update-grub
+
+
 echo -e "\n\033[93m\033[1mUpdating initramfs\033[0m"
 
 update-initramfs -u -k all

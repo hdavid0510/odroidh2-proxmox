@@ -1,3 +1,0 @@
-Package: proxmox-ve
-Pin: version 7.0*
-Pin-Priority: 999

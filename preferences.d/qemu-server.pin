@@ -1,3 +1,0 @@
-Package: qemu-server
-Pin: version 7.0*
-Pin-Priority: 999

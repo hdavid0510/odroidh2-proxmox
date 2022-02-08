@@ -43,4 +43,3 @@ Simply run as **root**:
 	*As of now, both `pve-kernel-5.13` and `pve-kernel-5.15` do not work well with iGPU passthrough. Thus `pve-kernel-5.11` is required. As PROXMOX `7.1-x` uses kernel `5.13` by default, it has to be manually installed and configured.
 	4. Rebuild kernel.
 	*System must be rebooted to take effect.*  
-	Note: **In order to use iGPU passthrough, use version pinning below.**

@@ -1,0 +1,9 @@
+[Unit]
+Description=System monitoring I2C OLED display daemon
+
+[Service]
+Type=simple
+ExecStart=/opt/sysmon-oled/sys_info.py --i2c-port %I2CPORT% --display ssd1306 --width 128 --height 32
+
+[Install]
+WantedBy=multi-user.target

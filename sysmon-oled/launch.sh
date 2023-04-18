@@ -23,4 +23,4 @@ if [ -z "$I2CPORT" ]; then
 	exit 1
 fi
 
-/opt/sysmon-oled/sys_info.py --i2c-port ${I2CPORT} --display ${DISPLAY} --width ${WIDTH} --height ${HEIGHT} --rotate ${ORIENTATION}
+python3 /opt/sysmon-oled/sys_info.py --i2c-port ${I2CPORT} --display ${DISPLAY} --width ${WIDTH} --height ${HEIGHT} --rotate ${ORIENTATION}

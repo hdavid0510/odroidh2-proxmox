@@ -17,7 +17,7 @@ echo -e "\n\033[93m\033[1mInstalling service\033[0m"
 
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 mkdir -p /opt/sysmon-oled
-cp -r ${SCRIPT_DIR}/../sysmon-oled /opt/sysmon-oled
+cp -r ${SCRIPT_DIR}/../sysmon-oled /opt/
 cp ${SCRIPT_DIR}/sysmon-oled.service /etc/systemd/system/sysmon-oled.service
 systemctl daemon-reload
 systemctl enable sysmon-oled.service

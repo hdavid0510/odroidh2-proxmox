@@ -1,0 +1,9 @@
+[Unit]
+Description=System monitoring I2C OLED display daemon
+
+[Service]
+Type=simple
+ExecStart=/opt/sysmon-oled/launch.sh
+
+[Install]
+WantedBy=multi-user.target

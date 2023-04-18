@@ -17,8 +17,10 @@ apt install byobu -y
 byobu-enable
 
 
-[ -f ./supporess-subs.sh ] && chmod +x ./supporess-subs.sh && ./supporess-subs.sh
-[ -f ./igfx.sh ] && chmod +x ./igfx.sh && ./igfx.sh
+[ -f ./setup/supporess-subs.sh ] && chmod +x ./setup/supporess-subs.sh && ./setup/supporess-subs.sh
 
+[ -f ./setup/igfx.sh ] && chmod +x ./setup/igfx.sh && ./setup/igfx.sh
+
+[ -f ./setup/sysmon-oled.sh ] && chmod +x ./setup/sysmon-oled.sh && ./setup/sysmon-oled.sh
 
 echo -e "\n\033[0;32m\xE2\x9C\x94\033[0m \033[92m\033[1mPROXMOX INIT SETUP FINISHED\033[0m"

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -e "\n\033[103m\033[30m\033[1m  ODROID H2 PROXMOX igpu passthrough setup  \033[0m"
+echo -e "\n\033[103m\033[30m\033[1m  ODROID H2/H3 PROXMOX subscription notice suppress  \033[0m"
 echo -e "  source: https://johnscs.com/remove-proxmox51-subscription-notice/"
 
 
